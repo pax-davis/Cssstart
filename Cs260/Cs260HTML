@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Startup App</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="user-info">
+            <h2>Welcome, User</h2>
+            <p>Placeholder for user login data</p>
+        </section>
+
+        <section class="app-data">
+            <h2>Application Data</h2>
+            <p>Sample application content goes here.</p>
+        </section>
+
+        <section class="websocket-data">
+            <h2>WebSocket Data</h2>
+            <p>Placeholder for real-time data updates.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Startup</p>
+        <p><a href="https://github.com/YOUR_GITHUB_REPO" target="_blank">View on GitHub</a></p>
+    </footer>
+</body>
+</html>
+
