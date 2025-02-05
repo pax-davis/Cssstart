@@ -10,20 +10,10 @@ do
 done
 
 if [[ -z "$key" || -z "$hostname" || -z "$service" ]]; then
-    printf "\nMissing required parameter.\n"
-    printf "  syntax: deployFiles.sh -k <pem key file> -h <hostname> -s <service>\n\n"
+    echo "Missing required parameter."
+    echo "syntax: deployFiles.sh -k <pem key> -h <hostname> -s <service>"
     exit 1
 fi
 
-printf "\n----> Deploying files for $service to $hostname with $key\n"
-
-# Step 1
-printf "\n----> Clear out the previous distribution on the target.\n"
-ssh -i "$key" ubuntu@$hostname << ENDSSH
-rm -rf services/${service}/public
-mkdir -p services/${service}/public
-ENDSSH
-
-# Step 2
-printf "\n----> Copy the distribution package to the target.\n"
-scp -r -i "$key" * ubuntu@$hostname:services/$service/public
+echo "Deploying $service to $hostname..."
+scp -i "$key" -r ./build ec2-user@$hostname:/var/www/html
